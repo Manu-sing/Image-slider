@@ -1,7 +1,3 @@
-import './style.css';
-import './image2.jpg';
-import './image3.jpg';
-import './image4.jpg';
 
 window.addEventListener('resize', function () { 
     "use strict";
