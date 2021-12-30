@@ -1,11 +1,43 @@
+import './style.css';
+import image2 from'./image2.jpg';
+import image3 from './image3.jpg';
+import image4 from './image4.jpg';
 
 window.addEventListener('resize', function () { 
     "use strict";
     window.location.reload(); 
 });
 
-const slideImage = document.querySelectorAll(".slide-image");
+// make images 
 const slidesContainer = document.querySelector(".slides-container");
+    
+    const slideImage2 = document.createElement("div");
+    slideImage2.classList.add("slide-image");
+    const img2 = new Image();
+    img2.src = image2;
+    img2.alt = "nature-image";
+    slideImage2.appendChild(img2);
+    slidesContainer.appendChild(slideImage2);
+    
+    const slideImage3 = document.createElement("div");
+    slideImage3.classList.add("slide-image");
+    const img3 = new Image();
+    img3.src = image3;
+    img3.alt = "nature-image";
+    slideImage3.appendChild(img3);
+    slidesContainer.appendChild(slideImage3);
+    
+    const slideImage4 = document.createElement("div");
+    slideImage4.classList.add("slide-image");
+    const img4 = new Image();
+    img4.src = image4;
+    img4.alt = "nature-image";
+    slideImage4.appendChild(img4);
+    slidesContainer.appendChild(slideImage4);
+
+
+
+const slideImage = document.querySelectorAll(".slide-image");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
 const navigationDots = document.querySelector(".navigation-dots");
@@ -91,6 +123,8 @@ function setActiveClass() {
     navigationDots.children[currentSlide].classList.add("active");
 
 }
+
+// a thing that comes to mind also is to check devTools on your live  github-pages. Although no image is showing, you should find an image-link. That gives clarity about where github actually searches for the image
 
 
 
